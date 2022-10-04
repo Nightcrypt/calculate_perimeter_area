@@ -9,7 +9,7 @@
     <div class="form-group">
       <div class="choiceSection">
         <p class="label">Do you want to get the perimeter or the area:</p>
-        <select name="operation" ngModel #operation="ngModel"  (change)= "result = 0; dataConverted = 0; selectedCalculHandler($event)">
+        <select name="operation" id="operation" ngModel #operation="ngModel"  (change)= "result = 0; dataConverted = 0; selectedCalculHandler($event)">
           <option selected>make a choice</option>
           <option *ngFor= "let operation of data.operations">{{operation}}</option>
         </select>
@@ -20,7 +20,7 @@
     <div class="form-group">
       <div class="choiceSection">
         <p class="label">Select a figure:</p>
-        <select name="figureName" ngModel #figureName="ngModel" (change)= "result = 0; dataConverted = 0; selectedFigureHandler($event)">
+        <select name="figureName" id="figureName" ngModel #figureName="ngModel" (change)= "result = 0; dataConverted = 0; selectedFigureHandler($event)">
           <option selected>choose a figure</option>
           <option *ngFor= "let figure of data.figures">{{figure.name}}</option>
         </select>
@@ -33,7 +33,7 @@
       <div class="upperBlock">
         <p class="label">Width:</p>
         <div class="inputSection">
-          <input type="number" name="width" ngModel #width="ngModel" required/>
+          <input type="number" name="width" id="width" ngModel #width="ngModel" required/>
           <span class="material-icons done" *ngIf="width.dirty && width.value > 0">done</span>
           <span class="material-icons cancel" *ngIf="width.dirty && width.value <= 0">cancel </span>
         </div>
@@ -42,7 +42,7 @@
       <div class="upperBlock">
         <p class="label">Length:</p>
         <div class="inputSection">
-          <input type="number" name="length" ngModel #length="ngModel" required/>
+          <input type="number" name="length" id="length" ngModel #length="ngModel" required/>
           <span class="material-icons done" *ngIf="(length.dirty && length.value > 0) && ((length.value < width.value))">done</span>
           <span class="material-icons cancel" *ngIf="(length.dirty && length.value <= 0) || (length.dirty && length.value >= width.value)">cancel </span>
         </div>
@@ -57,7 +57,7 @@
       <div class="upperBlock">
         <p class="label">Side:</p>
         <div class="inputSection">
-          <input type="number" name="side" ngModel #side="ngModel" required/>
+          <input type="number" name="side" id="side" ngModel #side="ngModel" required/>
           <span class="material-icons done" *ngIf="side.dirty && side.value > 0">done</span>
           <span class="material-icons cancel" *ngIf="side.dirty && side.value <= 0">cancel </span>
         </div>
@@ -71,7 +71,7 @@
       <div class="upperBlock">
         <p class="label">Radius:</p>
         <div class="inputSection">
-          <input type="number" name="radius" ngModel #radius="ngModel" required/>
+          <input type="number" name="radius" id= "radius" ngModel #radius="ngModel" required/>
           <span class="material-icons done" *ngIf="radius.dirty && radius.value > 0">done</span>
           <span class="material-icons cancel" *ngIf="radius.dirty && radius.value <= 0">cancel </span>
         </div>
@@ -85,7 +85,7 @@
         <p *ngIf="selectedCalcul == 'perimeter'" class="label">Side 1:</p>
         <p *ngIf="selectedCalcul == 'area'" class="label">Base:</p>
         <div class="inputSection">
-          <input type="number" name="side1" ngModel #side1="ngModel" required/>
+          <input type="number" name="side1" id="side1" ngModel #side1="ngModel" required/>
           <span class="material-icons done" *ngIf="side1.dirty && side1.value > 0">done</span>
           <span class="material-icons cancel" *ngIf="side1.dirty && side1.value <= 0">cancel </span>
         </div>
@@ -95,7 +95,7 @@
         <p *ngIf="selectedCalcul == 'perimeter'" class="label">Side 2:</p>
         <p *ngIf="selectedCalcul == 'area'" class="label">height:</p>  
         <div class="inputSection">
-          <input type="number" name="side2" ngModel #side2="ngModel" required/>
+          <input type="number" name="side2" id="side2"  ngModel #side2="ngModel" required/>
           <span class="material-icons done" *ngIf="side2.dirty && side2.value > 0">done</span>
           <span class="material-icons cancel" *ngIf="side2.dirty && side2.value <= 0">cancel </span>
         </div>
@@ -104,7 +104,7 @@
       <div class="upperBlock" *ngIf="selectedCalcul == 'perimeter'" class="label">
         <p>Side 3:</p>
         <div class="inputSection">
-          <input type="number" name="side3" ngModel #side3="ngModel" required/>
+          <input type="number" name="side3" id="side3" ngModel #side3="ngModel" required/>
           <span class="material-icons done" *ngIf="side3.dirty && side3.value > 0">done</span>
           <span class="material-icons cancel" *ngIf="side3.dirty && side3.value <= 0">cancel </span>
         </div>
@@ -126,25 +126,23 @@
 
     <div class="form-group" *ngIf="result > 0">
       <p class="label">Convert to:</p>
-
         <div  *ngIf="selectedCalcul == 'perimeter'">
-          <select name="unit" ngModel #unit="ngModel" (change) = "selectedConvertToUnitHandler($event)">
+          <select name="unit" id="unit" ngModel #unit="ngModel" (change) = "selectedConvertToUnitHandler($event)">
             <option *ngFor="let unit of data.units" >{{unit}}</option>
           </select>
         </div>
         <div  *ngIf="selectedCalcul == 'area'">
-          <select name="unit" ngModel #unit="ngModel" (change) = "selectedConvertToUnitHandler($event)">
+          <select name="unit" id="unit" ngModel #unit="ngModel" (change) = "selectedConvertToUnitHandler($event)">
             <option *ngFor="let unitSquare of data.squareUnits" >{{unitSquare}}</option>
           </select>
-        </div>
-      
+        </div>      
     </div>
 
     <div class="form-group" *ngIf="result > 0 && dataConverted > 0">
       <!-- Result -->
       <div class="upperBlock">
         <div class="inputSection">
-          <input type="number" readonly name="dataConverted" value={{dataConverted}} id="dataConverted"/>
+          <input type="number" readonly name="dataConverted" id="dataConverted" value={{dataConverted}} id="dataConverted"/>
           <p>{{convertToUnit}}</p>
         </div>
       </div>
@@ -152,9 +150,8 @@
 
     <div class="form-group">
       <div class="buttonSection">
-      <!-- <button type="submit" class="btn btn-default" [disabled]="!dataForm.valid" (click)="onSubmit(dataForm.value)">Get Result</button> -->
       <button type="submit" id="btnResult" class="btn btn-default" (click)="onSubmit(dataForm.value)">Get Result</button>
-      <button type="button" id="btnConvert" (click) = "convert(convertToUnit)">Convert</button>
+      <button type="button" id="btnConvert" (click) = "convert(convertToUnit)">= Convert</button>
       <button type="button" id="btnReset" (click) = "ngOnInit()">Reset</button>
       </div>
     </div>

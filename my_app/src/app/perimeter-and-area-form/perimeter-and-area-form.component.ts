@@ -46,13 +46,9 @@ export class PerimeterAndAreaFormComponent implements OnInit {
   // rectangle
   calculatePerimeterOfRectangle(width : number, length : number): number{
 
-    console.log("widht",  width)
-    console.log("lenght",  length)
     if((width>0 && length>0) && width > length){
-      console.log('dans if')
       return (2*(width + length))
     }
-    console.log(' pas dans if')
 
     return 0
   }
@@ -73,7 +69,7 @@ export class PerimeterAndAreaFormComponent implements OnInit {
   }
   calculateAreaOfSquare(side : number) : number {
     if(side > 0){
-      return (side*side)
+      return (Math.pow(side,2))
     }
     return 0
   }
