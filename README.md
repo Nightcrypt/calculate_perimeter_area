@@ -6,7 +6,7 @@ This project was generated with [Node](https://nodejs.org/en/download/) version 
 
 ## HOW TO RUN THE PROJECT
 
-## Start Backend
+## Start BackEnd
 **1**- make sure node is installed on your device <br>
 **2**- open the terminal<br>
 **3**- go to the node folder with `cd node`<br>
