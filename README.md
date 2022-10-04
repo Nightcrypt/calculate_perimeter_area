@@ -1,7 +1,7 @@
 # calculate_perimeter_area
 a web application that help kids to calculate the perimeter and/or the area of geometrical figures such as: Rectangle, square, circle, triangle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version : 14.2.4
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version : 14.2.4 <br>
 This project was generated with [Node](https://nodejs.org/en/download/) version : 18.3.0
 
 ## HOW TO RUN THE PROJECT
