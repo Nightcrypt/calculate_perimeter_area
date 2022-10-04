@@ -1,0 +1,11 @@
+<div class="flex-container">
+    <div>
+        <p> This is a circle :</p>
+        <div class="circle"></div>
+    </div>
+    <div>
+        <p>Enter radius : <input [(ngModel)]="radius" name="radius"placeholder="radius"></p>
+        <p>Area: {{ getArea() }} </p>
+        <p>Perimeter: {{ getPerimeter() }}</p>
+    </div>
+</div>

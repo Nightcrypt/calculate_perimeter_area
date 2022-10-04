@@ -1,0 +1,19 @@
+.circle{
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    right: -25%;
+}
+.flex-container {
+    display: flex;
+    background-color: red;
+    justify-content: center;
+}
+.flex-container > div {
+    background-color: blanchedalmond;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}

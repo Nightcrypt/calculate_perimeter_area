@@ -1,0 +1,12 @@
+<div class="flex-container">
+    <div>
+        <p> This is a triangle equilater:</p>
+        <div class="triangle"></div>
+    </div>
+    <div>
+        <p>Enter base : <input [(ngModel)]="base" placeholder="base"></p>
+        <p>Area: {{ getArea() }} </p>
+        <p>Enter height : <input [(ngModel)]="height" placeholder="height"></p>
+        <p>Perimeter: {{ getPerimeter() }}</p>
+    </div>
+</div>

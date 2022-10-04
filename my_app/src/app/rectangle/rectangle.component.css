@@ -1,0 +1,18 @@
+.square{
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    right: -25%;
+}
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+    justify-content: center;
+}
+.flex-container > div {
+    background-color: blanchedalmond;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}

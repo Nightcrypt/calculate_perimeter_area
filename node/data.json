@@ -1,0 +1,24 @@
+{
+    "operations" : ["perimeter", "area"],
+    "units":[ "km", "m", "dm", "cm"],
+    "squareUnits":["km²","m²","dm²","cm²"],
+    "figures":[
+        {
+            "name": "rectangle",
+            "parameters":[{"name":"width", "width":0}, {"name":"length", "length":0}]
+        },
+        {
+            "name": "square",
+            "parameters":[{"name":"side", "side":0}]
+        },
+        {
+            "name": "circle",
+            "parameters":[{"name":"radius", "radius":0}]
+        },
+        {
+            "name": "triangle",
+            "parametersArea":[{"name":"base", "base":0}, {"name":"height", "height":0}],
+            "parametersPerimeter": [ {"name":"side 1", "side1":0}, {"name":"side 2", "side2":0}, {"name":"side 3", "side3":0}]
+        }
+    ]
+}

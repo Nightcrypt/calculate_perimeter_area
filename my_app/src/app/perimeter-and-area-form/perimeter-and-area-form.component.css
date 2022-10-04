@@ -1,0 +1,113 @@
+.container{
+    /* width: 400px; */
+    /* height: 80vh; */
+    max-width: 90%;
+    min-width: max-content;
+    padding: 10%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerSection{
+    margin-bottom: 16px;
+}
+.headerTitle{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.form-group{
+    margin-top: 12px;
+}
+
+.label{
+    margin-bottom: 8px;
+    margin-top: 3px;
+}
+.inputSection{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 8px;
+
+}
+select{
+    width: 100%;
+}
+
+input{
+    /* width: 80%; */
+    flex-grow: 3;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+input:focus{
+    border: 3px solid #555;
+
+}
+
+
+select{
+    flex-grow: 3;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.buttonSection{
+    display: flex;
+    align-content: space-between;
+}
+
+button{
+    width: 100px;
+    padding: 8px;
+    color: white;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    margin: 0 3px;
+    border: none;
+    font-weight: bold;
+}
+
+#btnResult{
+    background-color: rgba(46, 164, 79, .7);
+}
+#btnResult:hover{
+    background-color: #2c974b;
+}
+#btnConvert{
+    background-color: #ffee00eb;
+}
+#btnConvert:hover{
+    background-color: #f4e603;
+}
+#btnReset{
+    background: rgba(255, 85, 85);
+}
+#btnReset:hover{
+    background: #E03A3A;
+   }
+
+.buttonSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-text{
+    font-size: 11px;
+    color: rgba(255, 85, 85);
+}
+
+.done{
+    color: rgba(46, 164, 79, .7)
+}
+.cancel{
+    color: rgba(255, 85, 85);
+}

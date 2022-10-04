@@ -1,0 +1,25 @@
+.triangle{
+    width:0;
+	height:0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 86px solid lightblue;
+	-moz-transform:rotate(0);
+	-webkit-transform:rotate(0);
+	-ms-transform:rotate(0);
+	-o-transform:rotate(0);
+	transform:rotate(0);
+    position: relative;
+    right: -25%;
+}
+.flex-container {
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+.flex-container > div {
+    background-color: blanchedalmond;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
